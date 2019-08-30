@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+      <style>
+         svg rect {
+            fill: gray;
+         }
+
+         svg text {
+            fill: yellow;
+            font: 12px sans-serif;
+            text-anchor: end;
+         }
+      </style>
+   </head>
+
+   <body>
+      <script>
+         var data = [10, 5, 12, 15];
+
+         var width = 300
+            scaleFactor = 20,
+            barHeight = 30;
+
+
+            var graph = d3.select("body")
+               .append("svg")
+               .attr("width", width)
+               .attr("height", barHeight * data.length);
+
+            graph.selectAll("react")
+               .data(data)
+               .enter()
+               .append("react")
+               .attr("x",function(d,i){return i*70;})
+               .attr("y",function(d,i){return (barHeight)*data.length-(scaleFactor*d);})
+               .attr("width",65
+               .attr("height",function(d,i){return scaleFactor*d;})
+               .attr("fill",green)
+</script>
+   </body>
+</html>
